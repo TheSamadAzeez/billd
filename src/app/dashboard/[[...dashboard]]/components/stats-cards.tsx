@@ -2,8 +2,8 @@ import { Briefcase, DollarSign, TrendingDown, TrendingUp, Users } from 'lucide-r
 
 // Dummy data
 const DUMMY_DATA = {
-  totalRevenue: 45750.0, // Sum of all PAID invoices
-  outstanding: 12500.0, // Sum of all PENDING invoices
+  totalRevenue: 4575000.0, // Sum of all PAID invoices
+  outstanding: 1250, // Sum of all PENDING invoices
   activeProjects: 8, // Count of ACTIVE projects
   totalClients: 24, // Count of total clients
 }
@@ -13,14 +13,22 @@ export function StatsCards() {
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
       <Card
         title="Total Revenue"
-        value={`$${DUMMY_DATA.totalRevenue.toLocaleString('en-US', { minimumFractionDigits: 2 })}`}
+        value={
+          DUMMY_DATA.totalRevenue.toLocaleString().length <= 5
+            ? `$${DUMMY_DATA.totalRevenue.toLocaleString('en-US', { minimumFractionDigits: 2 })}`
+            : `$${DUMMY_DATA.totalRevenue.toLocaleString()}`
+        }
         subtext="+15% vs last month"
         trendDirection="up"
         icon={DollarSign}
       />
       <Card
         title="Outstanding"
-        value={`$${DUMMY_DATA.outstanding.toLocaleString('en-US', { minimumFractionDigits: 2 })}`}
+        value={
+          DUMMY_DATA.outstanding.toLocaleString().length <= 5
+            ? `$${DUMMY_DATA.outstanding.toLocaleString('en-US', { minimumFractionDigits: 2 })}`
+            : `$${DUMMY_DATA.outstanding.toLocaleString()}`
+        }
         subtext="Pending invoices"
         trendDirection="down"
         icon={TrendingDown}
@@ -67,7 +75,7 @@ function Card({
         </div>
       </div>
       <div className="mt-4 flex items-baseline gap-2">
-        <span className="text-3xl font-bold">{value}</span>
+        <span className="text-2xl font-bold wrap-anywhere">{value}</span>
       </div>
       <div className="mt-1 flex items-center justify-between">
         <span className="text-xs text-muted-foreground">{subtext}</span>
