@@ -22,13 +22,13 @@ export default async function DashboardPage({ params }: DashboardPageProps) {
     <div className="min-h-screen flex-1 flex-col overflow-hidden">
       <main className="space-y-4 p-6">
         <div className="grid grid-cols-12 gap-4">
-          <div className="col-span-12 flex min-h-[600px] flex-col gap-4 md:col-span-9">
+          <div className="col-span-12 flex min-h-[600px] flex-col gap-4 md:col-span-8">
             <StatsCards />
             <div className="flex-1">
               <RevenueChart />
             </div>
           </div>
-          <div className="col-span-12 flex min-h-[600px] flex-col gap-4 md:col-span-3">
+          <div className="col-span-12 flex min-h-[600px] flex-col gap-4 md:col-span-4">
             <CalendarWidget />
             <RetentionChart />
             {/* <LeadsManagement /> */}
