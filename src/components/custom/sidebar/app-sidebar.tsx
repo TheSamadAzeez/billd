@@ -7,6 +7,7 @@ import {
   Command,
   Frame,
   GalleryVerticalEnd,
+  Map as MapIcon,
   PieChart,
   Settings2,
   SquareTerminal,
@@ -21,25 +22,25 @@ import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarRail } fr
 // This is sample data.
 const data = {
   user: {
-    name: 'shadcn',
-    email: 'm@example.com',
-    avatar: '/avatars/shadcn.jpg',
+    name: 'John Doe',
+    email: 'john@billd.com',
+    avatar: '/avatars/user.jpg',
   },
   teams: [
     {
-      name: 'Acme Inc',
+      name: 'Billd',
       logo: GalleryVerticalEnd,
+      plan: 'Professional',
+    },
+    {
+      name: 'Billd Agency',
+      logo: AudioWaveform,
       plan: 'Enterprise',
     },
     {
-      name: 'Acme Corp.',
-      logo: AudioWaveform,
-      plan: 'Startup',
-    },
-    {
-      name: 'Evil Corp.',
+      name: 'Freelance',
       logo: Command,
-      plan: 'Free',
+      plan: 'Starter',
     },
   ],
   navMain: [
@@ -83,7 +84,7 @@ const data = {
     {
       name: 'Travel',
       url: '#',
-      icon: Map,
+      icon: MapIcon,
     },
   ],
 }
