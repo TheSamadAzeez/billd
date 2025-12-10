@@ -1,9 +1,9 @@
-import { CalendarWidget } from '@/components/dashboard/calendar-widget'
-import { RecentActivities } from '@/components/dashboard/recent-activities'
+import { CalendarWidget } from '@/app/dashboard/[[...dashboard]]/components/calendar-widget'
+import { RecentActivities } from '@/app/dashboard/[[...dashboard]]/components/recent-activities'
 // import { LeadsManagement } from '@/components/dashboard/leads-management'
-import { RetentionChart } from '@/components/dashboard/retention-chart'
-import { RevenueChart } from '@/components/dashboard/revenue-chart'
-import { StatsCards } from '@/components/dashboard/stats-cards'
+import { RetentionChart } from '@/app/dashboard/[[...dashboard]]/components/retention-chart'
+import { RevenueChart } from '@/app/dashboard/[[...dashboard]]/components/revenue-chart'
+import { StatsCards } from '@/app/dashboard/[[...dashboard]]/components/stats-cards'
 
 interface DashboardPageProps {
   params: Promise<{
